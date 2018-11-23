@@ -1,0 +1,159 @@
+body{
+	font:12px "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+	color:#999;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+a{
+	color: #ffffff;
+	text-decoration:none;
+}
+a:hover{
+	color: #ce0500;
+	text-decoration:underline;
+}
+
+img{
+	vertical-align:bottom;
+}
+
+
+.container{
+	width:990px;
+	margin:0 auto;
+}
+
+/*1、页面头部*/
+#top{
+	/*高度，行高，背景颜色*/
+	height:30px;
+	line-height:30px;
+	background-color:#eee;
+}
+
+#list{
+	float:right;
+}
+
+#list>li{
+	float:left;
+	padding:0 5px;
+	/*box-sizing:border-box;
+	height:30px;*/
+}
+#list>li>b{
+	border-left:1px solid #999;
+	margin-right:10px;
+}
+#list>li>a:hover{
+	color:#F6AB00;
+}
+
+#top>a.address>u{
+	display:inline-block;
+	width:0px;
+	height:0px;
+	border:6px solid transparent;
+	border-top-color:#999;
+	/*相对定位：调整位置*/
+	position:relative;
+	top:4px;
+
+
+	/*border:5px solid #000;
+	border-left-color:#f00;
+	border-right-color:#ff0;
+	border-bottom-color:#0ff;*/
+}
+
+#top>a{
+	margin-left:10px;
+}
+
+/*3.banner广告*/
+#banner{
+	margin:15px 0;
+}
+#banner img{
+	width:100%;
+	height: 280px;
+}
+
+/*4.4幅小广告*/
+#adv-img{
+	overflow:hidden;
+}
+#adv-img li{
+	float:left;
+	margin-right:10px;
+}
+#adv-img li.no-margin{
+	margin-right:0px;
+}
+#adv-img img{
+	width:240px;
+}
+
+/*5、主体内容*/
+#main p.title>a{
+	color:#333;
+	float:right;
+}
+#main p.title>img{
+	width:356px;
+}
+#main p.title{
+	/*上边框，上内边距，上外边距，下外边距*/
+	border-top:1px solid #ccc;
+	padding-top:15px;
+	margin-top:25px;
+	margin-bottom:10px;
+}
+
+#main div.item>ul{
+	overflow:hidden;
+}
+#main div.item>ul>li{
+	/*宽度，左浮动，右外边距*/
+	width:190px;
+	float:left;
+	margin-right:10px;
+	/*下外边距*/
+	margin-bottom:10px;
+}
+#main div.item>ul>li.no-margin{
+	margin-right:0px;
+}
+#main div.item>ul>li>p>img{
+	width:190px;
+	/*过渡效果*/
+	transition:all .3s;
+}
+#main div.item>ul>li>p>img:hover{
+	transform:scale(1.1);
+}
+#main div.item>ul>li>p{
+	width:190px;
+	height:190px;
+	overflow:hidden;
+}
+
+#main div.content a.cart{
+	float:right;
+}
+#main div.content p{
+	color:#555;
+	margin-bottom:3px;
+}
+#main div.content{
+	margin-top:5px;
+}
+
+
+
+
+

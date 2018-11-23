@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>HTML5点击添加商品购物车代码 - A5源码</title>
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+{#<link rel="stylesheet" type="text/css" href="http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css">#}
+<link rel="stylesheet" type="text/css" href="/static/css/stylecart.css">
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script src="/static/js/shop-status.js"></script>
+    <script src="/static/js/jquery-1.11.3.min.js"></script>
+    <script src="/static/js/shop.min.js"></script>
+</head>
+<body>
+{% csrf_token %}
+<div class="ct-pageWrapper">
+    <div class="container" style="height: 80px">
+        <ul id="dengruzhuantai">
+        </ul>
+    </div>
+    <h1 style="text-align: center">{{ storename }}&nbsp;&nbsp;<a href="/" style="font-size: 15px">返回首页</a></h1>
+    <main>
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-3">
+		  <div class="widget">
+              <h2 class="widget-header">购物车</h2>
+              <div class="ct-cart"></div>
+		  </div>
+		</div>
+		<div class="col-md-9">
+		  <div class="row">
+              {% for dic in List %}
+                <div class="col-sm-4">
+                  <div class="ct-product">
+                    <div class="image"><img src="{{ dic.goodspicture }}" alt=""></div>
+                    <div class="inner"><a href="#" class="btn btn-motive ct-product-button"><i class="fa fa-shopping-cart"></i></a>
+                      <h2 class="ct-product-title">{{ dic.goodsname }}</h2>
+                      <p class="ct-product-description">剩余商品数量:{{ dic.goodsnumber }}件</p><span class="ct-product-price">￥{{ dic.goodsprice }}</span>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+		  </div>
+		</div>
+	  </div>
+	</div>
+            <script src="/static/js/shop.min.js"></script>
+  </main>
+
+
+<script>
+$('body').ctshop({
+  currency: '￥',
+  paypal: {
+	currency_code: 'CNY'
+  }
+});
+</script>
+</div>
+</body>
+</html>

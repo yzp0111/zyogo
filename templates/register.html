@@ -1,0 +1,27 @@
+{% extends 'login.html' %}
+
+{% block title %}
+    <h1>注册会员</h1>
+{% endblock %}
+
+{% block form %}
+    <form id="frmRegister" action="/register/" method="post">
+        {% csrf_token %}
+        <input type="text" name="uphone" class="username" placeholder="手机号码">
+        <span id="uphone-show"></span>
+        <input type="password" name="password" class="password" placeholder="密码---(6-15个字符)">
+        <span id="password-show"></span>
+        <input type="password" name="cpassword" class="password" placeholder="确认密码">
+        <span id="cpassword-show"></span>
+        <input type="text" name="username" class="username" placeholder="昵称">
+        <span id="uname-show"></span>
+        <button type="submit">注册</button>
+        <input type="button" name="regist" style="width: 300px;height: 44px;background-color: #078ca8;border: 1px solid #fff;" value="已有账号" onclick="location.href='/login'">
+        <div class="error"><span>+</span></div>
+    </form>
+{% endblock %}
+
+{% block script %}
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script src="/static/js/register.js"></script>
+{% endblock %}
